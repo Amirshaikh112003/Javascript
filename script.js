@@ -20,7 +20,7 @@
 
 // Event and Event listeners
 
-//input eventlistener
+//input eventListener
 // let inp = document.querySelector("input");
 // inp.addEventListener("input",(e)=>{
 //     if(e.data !== null) {
@@ -56,3 +56,41 @@
 //     }
 //});
 
+//mouseover
+// let abcd = document.querySelector('#abcd');
+// abcd.addEventListener('mouseover',()=>{
+//     abcd.style.backgroundColor="orange";
+// });
+
+//mouseout
+// abcd.addEventListener('mouseout',()=>{
+//     abcd.style.backgroundColor="red";
+// });
+
+//mousemove
+// abcd = document.querySelector("#abcd");
+// window.addEventListener('mousemove', (dets) => {
+//     console.log(dets);
+//     abcd.style.top = dets.clientY + "px";
+//     abcd.style.left = dets.clientX + "px";
+// })
+
+//event bubbling
+
+// let ul = document.querySelector("ul");
+// ul.addEventListener("click", (e) => {
+//     e.target.classList.toggle("lt");
+// });
+
+let inp = document.querySelector("input");
+let spn = document.querySelector("span");
+inp.addEventListener("input",()=>{
+    let left = 20 - inp.value.length;
+    if(left<0){
+        spn.textContent = left;
+        spn.style.color = "red";
+    } else{
+        spn.textContent = left;
+        spn.style.color = "black";
+    }
+});
